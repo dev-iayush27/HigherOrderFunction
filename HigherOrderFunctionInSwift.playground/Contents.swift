@@ -28,29 +28,42 @@ var products: [Product] {
 // Swift provides several built-in higher-order functions that you can use with arrays, dictionaries, and other collections.
 // In Swift, we have map, compactMap, filter, reduce, sorted etc.
 
+
 // MARK: - map
 // The map function applies a given transformation to each element of a collection and returns a new collection with the transformed elements.
 
 let names = products.map { $0.name }
+print("*** map ***")
 print(names)
+print("***********\n")
+
 
 // MARK: - compactMap
 // The compactMap function applies a given transformation to each element of a collection and returns a new collection containing the 'non-nil' results.
 
 let ratings = products.compactMap { $0.ratings }
+print("*** compactMap ***")
 print(ratings)
+print("***********\n")
+
 
 // MARK: - filter
 // The filter function selects elements from a collection that satisfy a given condition and returns a new collection containing only those elements.
 
 let filteredProducts = products.filter { $0.category == "Laptop" }
+print("*** filter ***")
 print(filteredProducts)
+print("***********\n")
+
 
 // MARK: - sorted
 // The sorted function returns a new collection with the elements of the original collection sorted based on a given sorting predicate.
 
 let sortedProducts = products.sorted { $0.name < $1.name }
+print("*** sorted ***")
 print(sortedProducts)
+print("***********\n")
+
 
 // MARK: - reduce
 // The reduce function combines all elements of a collection into a single value using a specified closure.
@@ -59,4 +72,6 @@ let totalPrice = products.map { $0.price }.reduce(0) { $0 + $1 }
 //let totalPrice = products.map { $0.price }.reduce(0) { (result, next) in
 //    return result + next
 //}
+print("*** reduce ***")
 print(totalPrice)
+print("***********\n")
